@@ -1,0 +1,26 @@
+INFO:     Started server process [31032]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+INFO:app.agents.scrape_agent:Starting ScrapeAgent run for URL: https://example.com
+INFO:app.core.tinyfish:[TinyFish] Starting new session.
+INFO:app.core.tinyfish:[TinyFish] Opening URL: https://example.com
+INFO:app.core.tinyfish:[TinyFish] Waited for 3 seconds.
+INFO:app.agents.flows.generic_tender_flow:Navigating to the tenders section...
+INFO:app.core.tinyfish:[TinyFish] Clicking selector: 'a#tenders-link'
+INFO:app.core.tinyfish:[TinyFish] Waited for 2 seconds.
+INFO:app.agents.flows.generic_tender_flow:Successfully navigated to the tenders section.
+INFO:app.agents.scrape_agent:--- Scraping Page 1 ---
+INFO:app.agents.flows.generic_tender_flow:Extracting tenders from the current page...
+INFO:app.core.tinyfish:[TinyFish] Extracting data using schema: {'title': 'h2.tender-title', 'description': 'div.tender-description', 'budget': 'span.tender-budget', 'deadline': 'span.tender-deadline'}
+INFO:app.agents.flows.generic_tender_flow:Extracted 2 tenders.
+INFO:app.agents.flows.generic_tender_flow:Attempting to navigate to the next page...
+INFO:app.core.tinyfish:[TinyFish] Scrolled down the page.
+INFO:app.core.tinyfish:[TinyFish] Clicking selector: 'button.next-page'
+INFO:app.core.tinyfish:[TinyFish] Waited for 2 seconds.
+INFO:app.agents.flows.generic_tender_flow:Navigated to the next page successfully.
+INFO:app.agents.scrape_agent:--- Scraping Page 2 ---
+INFO:app.agents.flows.generic_tender_flow:Extracting tenders from the current page...
+INFO:app.core.tinyfish:[TinyFish] Extracting data using schema: {'title': 'h2.tender-title', 'description': 'div.tender-description', 'budget': 'span.tender-budget', 'deadline': 'span.tender-deadline'}
+INFO:app.agents.flows.generic_tender_flow:Extracted 2 tenders.
+INFO:app.agents.scrape_agent:ScrapeAgent run completed. Total tenders extracted: 4
